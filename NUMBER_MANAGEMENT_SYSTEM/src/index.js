@@ -19,7 +19,7 @@ app.get("/numbers", async (req, res) => {
   } catch (error) {
     console.error(error);
   }
-  res.json(Array.from(result).sort((a, b) => a - b));
+  res.json({ numbers: Array.from(result).sort((a, b) => a - b) });
 });
 
 app.listen(port, () => {
